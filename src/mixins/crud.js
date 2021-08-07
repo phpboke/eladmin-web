@@ -58,8 +58,8 @@ export default {
         this.loading = true
         // 请求数据
         initData(this.url, this.getQueryParame()).then(data => {
-          this.total = data.totalElements
-          this.data = data.content
+          this.total = data.data.total
+          this.data = data.data.records
           // time 毫秒后显示表格
           setTimeout(() => {
             this.loading = false
